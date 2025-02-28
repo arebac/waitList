@@ -1,0 +1,86 @@
+/* Background & Container */
+.waitlistcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(188deg, #ff1111, #ff7c0c, #ffb905, #f5f100);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Content Box */
+  .waitlistcontent {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Headings & Text */
+  .waitlistcontent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .waitlistcontent p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  .waitlistform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .waitlistform input {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .waitlistform button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .waitlistform button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  /* Success Message */
+  .successmessage {
+    font-size: 1.2rem;
+    color: #90ee90;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Note */
+  .note {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    opacity: 0.8;
+  }
+
+  .waitlistform button:disabled {
+    background: gray !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transition: none;
+  }
