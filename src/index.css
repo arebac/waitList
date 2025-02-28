@@ -1,9 +1,19 @@
-html, body, #root {
+
+html, body {
+  background-color: linear-gradient(188deg, #ff1111, #ff7c0c, #ffb905, #f5f100);  color: white; /* Replace with your actual background color */
   height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(188deg, #ff1111, #ff7c0c, #ffb905, #f5f100);  color: white;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;  /* Prevents horizontal scrolling */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+.waitlistcontainer {
+  width: 100%;
+  height: 100vh; /* Ensures it covers full viewport height */
+  min-height: 100vh; /* Forces it to always fill the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
