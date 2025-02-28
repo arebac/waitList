@@ -104,3 +104,23 @@
   transition: none;
 }
 
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+  .waitlistcontent {
+    max-width: 80%;
+    padding: 12px;
+  }
+
+  .waitlistcontent h1 {
+    font-size: 1.1rem;
+  }
+
+  .waitlistcontent p {
+    font-size: 0.85rem;
+  }
+
+  .waitlistform input,
+  .waitlistform button {
+    max-width: 100%;
+  }
+}
