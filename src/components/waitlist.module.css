@@ -42,6 +42,7 @@
 
 /* Headings & Text */
 .waitlistcontent h1 {
+  margin: 0;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
