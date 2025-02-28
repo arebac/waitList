@@ -6,52 +6,53 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: env(safe-area-inset-top, 10px) 20px env(safe-area-inset-bottom, 20px);
+  padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 20px);
   box-sizing: border-box;
-  background: inherit;
-  overflow: hidden; /* Prevents horizontal scroll */
+  background: inherit; /* Inherit background from html */
 }
 
-/* Content Box */
+.waitlistcontainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top, 20px) 20px env(safe-area-inset-bottom, 20px);
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents unwanted scroll */
+}
+
 .waitlistcontent {
-  width: 90%; /* Makes it responsive */
-  max-width: 400px; /* Prevents it from being too wide */
-  max-height: 90vh; /* Ensures content fits on the screen */
-  overflow-y: auto; /* Allows scrolling inside if necessary */
-  padding: 25px;
+  max-width: 80%;
+  padding: 30px;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px; /* Adds spacing between elements */
 }
 
-/* Logo Image */
 .waitlistcontent img {
-  width: 50%; /* Makes it smaller */
-  max-width: 120px; /* Prevents it from getting too big */
+  width: 60%; /* Resize to fit within the box */
+  max-width: 150px; /* Prevents it from being too large */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers the image */
 }
+
+/* Content Box */
 
 /* Headings & Text */
 .waitlistcontent h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
-  line-height: 1.2;
 }
 
 .waitlistcontent p {
-  font-size: 1rem;
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
 /* Form Styling */
 .waitlistform {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -63,16 +64,12 @@
   border: none;
   border-radius: 5px;
   outline: none;
-  width: 100%;
-  max-width: 300px;
 }
 
 .waitlistform button {
-  width: 100%;
-  max-width: 300px;
   background: linear-gradient(90deg, #ff416c, #ff4b2b);
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -87,7 +84,7 @@
 
 /* Success Message */
 .successmessage {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #90ee90;
   font-weight: bold;
   margin-top: 10px;
@@ -100,7 +97,6 @@
   opacity: 0.8;
 }
 
-/* Disabled Button */
 .waitlistform button:disabled {
   background: gray !important;
   cursor: not-allowed;
@@ -108,23 +104,17 @@
   transition: none;
 }
 
-/* 🔥 Mobile Optimization */
 @media (max-width: 768px) {
-  .waitlistcontent {
-    max-width: 90%;
-    padding: 20px;
-  }
-
   .waitlistcontent h1 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Reduce heading size */
   }
 
   .waitlistcontent p {
-    font-size: 0.95rem;
+    font-size: 1rem; /* Reduce paragraph size */
   }
 
   .waitlistform input,
   .waitlistform button {
-    max-width: 100%;
+    max-width: 90%; /* Prevents them from being too large */
   }
 }
