@@ -52,7 +52,7 @@ const WaitList = () => {
       <div className={styles.waitlistcontent}>
       <img src="logo_no_background.5b9fd4286b9cbfd212fd.png"/> 
         <h1>Is coming to the Web</h1>
-        <h1>Are You Ready?</h1>
+        <h2>Are You Ready?</h2>
         <p>Work out anytime, anywhere. No limits. No excuses.</p>
         <p>Join the waitlist and be the first to experience it!</p>
 
