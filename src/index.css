@@ -1,9 +1,9 @@
 html, body {
   background: linear-gradient(180deg, #ff4500, #ffcc00); /* Adjust to your gradient */
-  height: 90%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: show;
+  overflow-x: hidden;
   color:white;;
 }
 

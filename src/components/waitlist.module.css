@@ -19,12 +19,14 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   }
 
+
+
 .waitlistcontent img {
-  width: 50%; /* Adjust size as needed */
-  max-width: 200px; /* Prevents it from getting too big */
-  height: auto; /* Maintains aspect ratio */
-  display: block; /* Ensures proper centering */
-  margin: 0 auto 20px; /* Centers the image and adds spacing below */
+  width: 60%; /* Resize to fit within the box */
+  max-width: 150px; /* Prevents it from being too large */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centers the image */
 }
   
   /* Content Box */
