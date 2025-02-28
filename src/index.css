@@ -1,9 +1,10 @@
-/* Apply background color to the whole page */
 html, body, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: black;
-    font-family: Arial, sans-serif;
-  }
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: black;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;  /* Prevents horizontal scrolling */
+}
