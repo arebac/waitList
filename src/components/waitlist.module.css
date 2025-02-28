@@ -104,17 +104,3 @@
   transition: none;
 }
 
-@media (max-width: 768px) {
-  .waitlistcontent h1 {
-    font-size: 2rem; /* Reduce heading size */
-  }
-
-  .waitlistcontent p {
-    font-size: 1rem; /* Reduce paragraph size */
-  }
-
-  .waitlistform input,
-  .waitlistform button {
-    max-width: 100%; /* Prevents them from being too large */
-  }
-}
