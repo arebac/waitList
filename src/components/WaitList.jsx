@@ -26,7 +26,9 @@ const WaitList = () => {
 
     setLoading(true); // Disable button while submitting
 
-    fetch("https://formspree.io/f/mjkgnglb", {
+
+    
+    fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT, {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
