@@ -104,6 +104,20 @@
   transition: none;
 }
 
+@media (max-width: 768px) {
+  .waitlistcontent h1 {
+    font-size: 1.8rem; /* Slightly reduce for mobile */
+  }
+
+  .waitlistcontent p {
+    font-size: 1rem; /* Keep text readable */
+  }
+
+  .waitlistform input,
+  .waitlistform button {
+    font-size: 1.1rem; /* Ensure input & button are readable */
+  }
+}
 /* Mobile Tweaks */
 @media (max-width: 768px) {
   .waitlistcontent {
@@ -112,11 +126,11 @@
   }
 
   .waitlistcontent h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
   .waitlistcontent p {
-    font-size: 0.85rem;
+    font-size: 1.0rem;
   }
 
   .waitlistform input,
