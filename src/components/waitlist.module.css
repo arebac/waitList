@@ -11,6 +11,13 @@
   background: inherit; /* Inherit background from html */
 }
 
+ .waitlistcontent {
+    max-width: 80%;
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
 
 .waitlistcontent img {
   width: 50%; /* Adjust size as needed */
@@ -21,14 +28,7 @@
 }
   
   /* Content Box */
-  .waitlistcontent {
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
+ 
   
   /* Headings & Text */
   .waitlistcontent h1 {
