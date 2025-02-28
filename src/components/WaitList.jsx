@@ -50,7 +50,7 @@ const WaitList = () => {
       <ToastContainer position="top-center" autoClose={3000} /> {/* Toast container */}
 
       <div className={styles.waitlistcontent}>
-      <img src="public/logo_no_background.5b9fd4286b9cbfd212fd.png"/> 
+      <img src="logo_no_background.5b9fd4286b9cbfd212fd.png"/> 
         <h1>Is coming to the Web</h1>
         <h1>Are You Ready?</h1>
         <p>Work out anytime, anywhere. No limits. No excuses.</p>
