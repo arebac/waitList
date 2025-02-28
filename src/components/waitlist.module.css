@@ -6,9 +6,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center; /* Centers text */
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden; /* Prevents horizontal scroll */
+}
+
+.waitlistcontent img {
+  width: 50%; /* Adjust size as needed */
+  max-width: 200px; /* Prevents it from getting too big */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures proper centering */
+  margin: 0 auto 20px; /* Centers the image and adds spacing below */
 }
   
   /* Content Box */
@@ -25,6 +34,7 @@
   .waitlistcontent h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+
   }
   
   .waitlistcontent p {
