@@ -35,7 +35,7 @@
   max-width: 150px; /* Prevents it from being too large */
   height: auto;
   display: block;
-  margin: 0 auto; /* Centers the image */
+  margin: 0; /* Centers the image */
 }
 
 /* Content Box */
