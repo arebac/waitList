@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import styles from "../components/waitlist.module.css"; // Import the CSS file
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
@@ -7,6 +7,11 @@ import "react-toastify/dist/ReactToastify.css";
 const WaitList = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.body.style.background = "linear-gradient(180deg, #ff4500, #ffcc00)";
+    document.body.style.backgroundSize = "cover";
+  }, []); // Runs only once on mount
 
   // Function to validate email
   const isValidEmail = (email) => {
