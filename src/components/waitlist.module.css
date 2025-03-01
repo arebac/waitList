@@ -106,6 +106,8 @@
     background-attachment: fixed; /* Ensures full height on mobile */
   }
 
+  
+
   .waitlistcontainer{
     width: 100%;
     min-height: 100vh;
