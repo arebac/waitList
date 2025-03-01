@@ -9,13 +9,8 @@ html, body, #root {
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed !important;
-  background-size: cover !important;
-  flex: 1; /* Ensures it expands fully */
+  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed;
+  background-size: cover;
   color:white;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-}
