@@ -1,7 +1,7 @@
 
 
 html, body, #root {
-  height: 100vh; /* Ensures it fills the whole screen */
+  min-height: 100vh; /* Ensures it fills the whole screen */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -10,4 +10,9 @@ html, body, #root {
   background-size: cover;
   color: white;
   font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
 }

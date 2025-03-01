@@ -1,13 +1,14 @@
 /* Background & Container */
 .waitlistcontainer {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures full height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  background: inherit; /* Inherit background from html */
+  background: linear-gradient(180deg, #ff4500, #ffcc00); /* Apply directly */
+  background-size: cover;
 }
 
 
