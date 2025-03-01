@@ -1,7 +1,6 @@
 html, body, #root {
   position: sticky !important;  /* ✅ Prevents Safari shrinking the background */
   width: 100%;
-  height: 100%;
   margin: 0;
   color:white;
 }
