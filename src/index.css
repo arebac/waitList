@@ -11,7 +11,7 @@ html, body, #root {
   background-position: center !important;
   font-family: Arial, sans-serif;
   color: white;
-  min-height: -webkit-fill-available
+  min-height: -webkit-fill-available;
 }
 
 
