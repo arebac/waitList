@@ -101,16 +101,11 @@
 /* Mobile Tweaks */
 @media (max-width: 768px) {
 
-  html, body, #root {
-    min-height: 100vh;
-    background-attachment: fixed; /* Ensures full height on mobile */
-  }
-
   
 
   .waitlistcontainer{
     width: 100%;
-    min-height: 100vh;
+
   }
 
   
