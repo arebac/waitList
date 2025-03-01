@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 20px);
   box-sizing: border-box;
   background: inherit; /* Inherit background from html */
 }
