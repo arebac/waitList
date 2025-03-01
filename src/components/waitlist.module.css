@@ -1,3 +1,18 @@
+/* Background & Container */
+.waitlistcontainer {
+  width: 100%;
+  min-height: 100vh; /* Ensures full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #ff4500, #ffcc00); /* Apply directly */
+  background-size: cover;
+}
+
+
+
 .waitlistcontent {
   max-width: 80%;
   padding: 30px;
@@ -82,13 +97,16 @@
   transition: none;
 }
 
+
 /* Mobile Tweaks */
 @media (max-width: 768px) {
-  .waitlistcontainer {
+
+  .waitlistcontainer{
     width: 100%;
     min-height: 100vh;
   }
 
+  
   .waitlistcontent {
     max-width: 90%;
     padding: 13px;
@@ -99,7 +117,7 @@
   }
 
   .waitlistcontent p {
-    font-size: 1rem;
+    font-size: 1.0rem;
   }
 
   .waitlistform input,
