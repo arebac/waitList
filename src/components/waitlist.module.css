@@ -108,26 +108,21 @@
 
 
 /* Mobile Tweaks */
+@media (max-width: 768px) {
 
+  
+  .waitlistcontent {
+    max-width: 100%;
+    padding: 13px;
+  }
 
-  @media (max-width: 768px) {
-    .waitlistcontainer {
-      padding: env(safe-area-inset-top, 10px) 10px env(safe-area-inset-bottom, 10px);
-    }
-  
-    .waitlistcontent {
-      width: 90%;
-      max-width: 330px;
-      padding: 20px;
-    }
-  
-    .waitlistcontent h1 {
-      font-size: 1.8rem;
-    }
-  
-    .waitlistcontent p {
-      font-size: 1rem;
-    }
+  .waitlistcontent h1 {
+    font-size: 1.8rem;
+  }
+
+  .waitlistcontent p {
+    font-size: 1.0rem;
+  }
 
   .waitlistform input,
   .waitlistform button {
