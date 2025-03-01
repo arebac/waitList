@@ -9,6 +9,7 @@
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
+  padding: 3%;
 
   /* ✅ Force background inside the component */
   background: linear-gradient(180deg, #ff4500, #ffcc00) fixed !important;
