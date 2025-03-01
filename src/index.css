@@ -1,9 +1,13 @@
-html, body {
-  background: linear-gradient(180deg, #ff4500, #ffcc00); /* Adjust to your gradient */
-  height: 100vh;
+
+
+html, body, #root {
+  height: 100vh; /* Ensures it fills the whole screen */
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  color:white;
+  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed;
+  background-size: cover;
+  color: white;
+  font-family: Arial, sans-serif;
 }
-
