@@ -1,7 +1,6 @@
 html, body, #root {
   position: relative; /* ✅ Prevents Safari from ignoring background */
-  min-height: 100vh;
-  min-height: 100dvh; /* ✅ Fixes Safari shrinking issue */
+  min-height: 100vh; /* ✅ Fixes Safari shrinking issue */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -12,14 +11,10 @@ html, body, #root {
   background-position: center !important;
   font-family: Arial, sans-serif;
   color: white;
+  min-height: -webkit-fill-available
 }
 
-/* ✅ Force Safari to use full screen height */
-@supports (-webkit-touch-callout: none) {
-  html, body, #root {
-    min-height: -webkit-fill-available !important;
-  }
-}
+
 * {
   box-sizing: border-box;
   padding: 0;
