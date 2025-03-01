@@ -1,28 +1,22 @@
-
-
 html, body, #root {
-  min-height: 100vh; /* Ensures full height */
-  min-height: 100dvh;
+  position: relative; /* ✅ Prevents Safari from ignoring background */
+  min-height: 100vh;
+  min-height: 100dvh; /* ✅ Fixes Safari shrinking issue */
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed;
-  background-size: cover;
+  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed !important;
+  background-size: cover !important;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center !important;
   font-family: Arial, sans-serif;
-  color:white;
+  color: white;
 }
 
+/* ✅ Force Safari to use full screen height */
 @supports (-webkit-touch-callout: none) {
   html, body, #root {
-    min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available !important;
   }
 }
-* {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-
