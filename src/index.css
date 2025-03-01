@@ -1,20 +1,24 @@
 html, body, #root {
-  position: relative; /* ✅ Prevents Safari from ignoring background */
-  min-height: 100vh; /* ✅ Fixes Safari shrinking issue */
+  position: fixed !important;  /* ✅ Prevents Safari shrinking the background */
+  min-height: 100vh !important; /* ✅ Standard browsers */
+  min-height: 100dvh !important; /* ✅ Safari fix */
+  height: 100% !important;
   width: 100%;
-  min-height: 100dvh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden !important; /* ✅ Prevents Safari from messing with height */
   background: linear-gradient(180deg, #ff4500, #ffcc00) fixed !important;
   background-size: cover !important;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
   background-position: center !important;
-  font-family: Arial, sans-serif;
-  color: white;
-  min-height: -webkit-fill-available;
 }
 
+/* ✅ Force Safari to use full screen height */
+@supports (-webkit-touch-callout: none) {
+  html, body, #root {
+    height: -webkit-fill-available !important;
+  }
+}
 
 * {
   box-sizing: border-box;
