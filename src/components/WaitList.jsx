@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import styles from "../components/waitlist.module.css"; // Import the CSS file
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
