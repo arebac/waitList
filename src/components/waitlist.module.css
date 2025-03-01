@@ -110,7 +110,7 @@
 /* Mobile Tweaks */
 @media (max-width: 768px) {
   .waitlistcontent {
-    max-width: 80%;
+    max-width: 100%;
     padding: 13px;
   }
 
