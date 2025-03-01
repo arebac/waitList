@@ -101,13 +101,13 @@
 @media (max-width: 768px) {
 
   .waitlistcontainer{
-    width: 95%;
+    width: 100%;
     min-height: 100vh;
   }
 
   
   .waitlistcontent {
-    max-width: 100%;
+    max-width: 90%;
     padding: 13px;
   }
 
