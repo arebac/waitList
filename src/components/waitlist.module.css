@@ -1,14 +1,30 @@
-/* Background & Container */
+
+
+
+/* Ensure the container takes up full height */
 .waitlistcontainer {
   width: 100%;
-  min-height: 100vh; /* Ensures full height */
+  min-height: 100vh; /* Standard browsers */
+  min-height: 100dvh; /* ✅ Safari fix */
+  height: 100%; /* Ensures full-page coverage */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #ff4500, #ffcc00); /* Apply directly */
-  background-size: cover;
+
+  /* ✅ Force background inside the component */
+  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* ✅ Extra fix for Safari */
+@supports (-webkit-touch-callout: none) {
+  .waitlistcontainer {
+    min-height: -webkit-fill-available !important;
+  }
 }
 
 
