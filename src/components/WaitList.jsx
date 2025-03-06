@@ -3,6 +3,7 @@ import styles from "../components/waitlist.module.css"; // Import the CSS file
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { saveEmail } from "../firebase"; // Import Firestore function
 
 const WaitList = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -12,37 +13,29 @@ const WaitList = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const email = formData.get("email");
 
-    // Validate email before submitting
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+  
     if (!isValidEmail(email)) {
       toast.error("❌ Please enter a valid email address.");
       return;
     }
-
-    setLoading(true); // Disable button while submitting
-
-
-    
-    fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-    })
-      .then((res) => res.json())
-      .then(() => {
-        setSubmitted(true);
-        toast.success("🎉 Success! You're on the waitlist!");
-      })
-      .catch((err) => {
-        console.error(err);
-        toast.error("⚠️ Something went wrong. Please try again.");
-      })
-      .finally(() => setLoading(false)); // Re-enable button
+  
+    setLoading(true);
+  
+    const success = await saveEmail(email);
+    if (success) {
+      setSubmitted(true);
+      toast.success("🎉 Success! You're on the waitlist!");
+    } else {
+      toast.error("⚠️ Something went wrong. Please try again.");
+    }
+  
+    setLoading(false);
   };
+
 
   return (
     <div className={styles.waitlistcontainer}>
