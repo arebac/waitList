@@ -2,13 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAvbteC6O-bDvyJ-m-WKltR6IDTaKcWFXk",
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
   authDomain: "cubeappwaitlist-4c401.firebaseapp.com",
   projectId: "cubeappwaitlist-4c401",
   storageBucket: "cubeappwaitlist-4c401.firebasestorage.app",
@@ -17,10 +13,8 @@ const firebaseConfig = {
   measurementId: "G-6QNB3W7ZL2"
 };
 
-// Initialize Firebase
 
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app); // 🔹 Connect to Firestore
