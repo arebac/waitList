@@ -2,9 +2,8 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
-
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+  apiKey: "AIzaSyAvbteC6O-bDvyJ-m-WKltR6IDTaKcWFXk",
   authDomain: "cubeappwaitlist-4c401.firebaseapp.com",
   projectId: "cubeappwaitlist-4c401",
   storageBucket: "cubeappwaitlist-4c401.firebasestorage.app",
@@ -12,8 +11,6 @@ const firebaseConfig = {
   appId: "1:147585862617:web:da8c1f893e76f63007a7c8",
   measurementId: "G-6QNB3W7ZL2"
 };
-
-
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
