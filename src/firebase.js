@@ -3,7 +3,6 @@ import validator from "validator";
 export const saveEmail = async (email) => {
   // ✅ Validate email before sending request
   if (!validator.isEmail(email)) {
-    console.error("Invalid email format");
     return { success: false, error: "invalid" }; // Return an error type
   }
 
@@ -16,7 +15,6 @@ export const saveEmail = async (email) => {
 
     // ✅ Handle duplicate email separately
     if (response.status === 409) {
-      console.warn("⚠️ Duplicate email detected. User is already on the waitlist.");
       return { success: false, error: "duplicate" }; // Return duplicate email error
     }
 
@@ -27,7 +25,6 @@ export const saveEmail = async (email) => {
     return { success: true }; // ✅ Successfully saved
   } catch (error) {
     if (process.env.NODE_ENV !== "production") {
-      console.error("Error saving email:", error);
     }
     return { success: false, error: "unknown" }; // Return unknown error type
   }
