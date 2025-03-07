@@ -12,7 +12,7 @@
   padding: 3%;
 
   /* ✅ Force background inside the component */
-  background: linear-gradient(180deg, #ff4500, #ffcc00) fixed !important;
+  background: black;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;

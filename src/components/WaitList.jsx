@@ -17,16 +17,16 @@ const WaitList = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
-  
+
     if (!isValidEmail(email)) {
       toast.error("❌ Please enter a valid email address.");
       return;
     }
-  
+
     setLoading(true);
-  
+
     const result = await saveEmail(email);
-    
+
     if (result.success) {
       setSubmitted(true);
       toast.success("🎉 Success! You're on the waitlist!");
@@ -35,23 +35,28 @@ const WaitList = () => {
     } else {
       toast.error("⚠️ Something went wrong. Please try again.");
     }
-  
+
     setLoading(false);
   };
 
   return (
     <div className={styles.waitlistcontainer}>
-      <ToastContainer position="top-center" autoClose={3000} /> {/* Toast container */}
-
+      <ToastContainer position="top-center" autoClose={3000} />{" "}
+      {/* Toast container */}
       <div className={styles.waitlistcontent}>
         <img src="logo_no_background.5b9fd4286b9cbfd212fd.png" />
-        <h1>Is coming to the Web</h1>
-        <h2>Are You Ready?</h2>
-        <p>Work out anytime, anywhere. No limits. No excuses.</p>
-        <p>Join the waitlist and be the first to experience it!</p>
+        <h1>Get Pumped & Stay Healthy—Anywhere, Anytime! 💪</h1>
+        <h2>Are You Ready to Elevate Your Fitness?</h2>
+        <h3>Think of your longevity!!!</h3>
+        <p>Train on your time with a functional strength format.</p>
+        <p>Use Dumbbells, Kettlebells, Bands, or Just Your Bodyweight!</p>
+        <p>Minimal Equipment Required. 🚀</p>
+        <p>Build Strength, Improve Conditioning & Prevent Injuries.</p>
 
         {submitted ? (
-          <p className={styles.successMessage}>🎉 Thanks! You’re on the waitlist.</p>
+          <p className={styles.successMessage}>
+            🎉 Thanks! You’re on the waitlist.
+          </p>
         ) : (
           <form onSubmit={handleSubmit} className={styles.waitlistform}>
             <input
@@ -68,7 +73,8 @@ const WaitList = () => {
         )}
 
         <p className={styles.note}>
-          Get pumped! 💪 We’ll notify you when we go live! 🔥
+          Join the waitlist to get exclusive early access to our launch date and
+          be the first to experience it!
         </p>
       </div>
     </div>
