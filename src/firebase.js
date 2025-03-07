@@ -1,20 +1,34 @@
+import validator from "validator";
+
 export const saveEmail = async (email) => {
+  // ✅ Validate email before sending request
+  if (!validator.isEmail(email)) {
+    console.error("Invalid email format");
+    return false;
+  }
+
   try {
-    const response = await fetch('https://firebase-email-service-cac21b655613.herokuapp.com/add-entry', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    const response = await fetch("https://firebase-email-service-cac21b655613.herokuapp.com/add-entry", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    // ✅ Handle duplicate email separately
+    if (response.status === 409) {
+      console.warn("⚠️ Duplicate email detected. User is already on the waitlist.");
+      return false;
     }
 
-    return true; // Successfully saved
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    return true; // ✅ Successfully saved
   } catch (error) {
-    console.error('Error saving email:', error);
-    return false; // Error occurred
+    if (process.env.NODE_ENV !== "production") {
+      console.error("Error saving email:", error);
+    }
+    return false;
   }
 };
