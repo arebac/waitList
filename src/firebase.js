@@ -4,7 +4,7 @@ export const saveEmail = async (email) => {
   // ✅ Validate email before sending request
   if (!validator.isEmail(email)) {
     console.error("Invalid email format");
-    return false;
+    return { success: false, error: "invalid" }; // Return an error type
   }
 
   try {
@@ -17,18 +17,18 @@ export const saveEmail = async (email) => {
     // ✅ Handle duplicate email separately
     if (response.status === 409) {
       console.warn("⚠️ Duplicate email detected. User is already on the waitlist.");
-      return false;
+      return { success: false, error: "duplicate" }; // Return duplicate email error
     }
 
     if (!response.ok) {
       throw new Error(`Request failed with status ${response.status}`);
     }
 
-    return true; // ✅ Successfully saved
+    return { success: true }; // ✅ Successfully saved
   } catch (error) {
     if (process.env.NODE_ENV !== "production") {
       console.error("Error saving email:", error);
     }
-    return false;
+    return { success: false, error: "unknown" }; // Return unknown error type
   }
 };

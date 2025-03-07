@@ -17,22 +17,25 @@ const WaitList = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
-
+  
     if (!isValidEmail(email)) {
       toast.error("❌ Please enter a valid email address.");
       return;
     }
-
+  
     setLoading(true);
-
-    const success = await saveEmail(email);
-    if (success) {
+  
+    const result = await saveEmail(email);
+    
+    if (result.success) {
       setSubmitted(true);
       toast.success("🎉 Success! You're on the waitlist!");
+    } else if (result.error === "duplicate") {
+      toast.error("⚠️ This email is already on the waitlist.");
     } else {
       toast.error("⚠️ Something went wrong. Please try again.");
     }
-
+  
     setLoading(false);
   };
 
